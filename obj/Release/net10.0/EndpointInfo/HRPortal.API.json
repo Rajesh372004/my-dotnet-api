@@ -1,0 +1,3436 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "HRPortal.API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/EmployeeMaster/HRregister": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrRegisterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrRegisterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrRegisterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/HRlogin": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrLoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrLoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrLoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/update-profile/{id}": {
+      "put": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrAdmin"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrAdmin"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrAdmin"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster": {
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/upload-photo/{id}": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "photo": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "photo": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/profile/{id}": {
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/register": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/{id}/address": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeAddressDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeAddressDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeAddressDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/{id}/personal-details": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeePersonalDetailsDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeePersonalDetailsDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeePersonalDetailsDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/{id}/education/bulk": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmployeeEducationDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmployeeEducationDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmployeeEducationDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/{id}/compensation": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeCompensationDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeCompensationDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeCompensationDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeCompensation"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeCompensation"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeCompensation"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/{id}/previous-employment": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmployeePreviousEmploymentDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmployeePreviousEmploymentDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmployeePreviousEmploymentDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EmployeePreviousEmployment"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EmployeePreviousEmployment"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EmployeePreviousEmployment"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/{id}/documents": {
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/upload": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "EmployeeId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Resume": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "OfferLetter": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "AppointmentLetter": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "IdProof": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "AddressProof": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "EducationalCertificates": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "ExperienceLetters": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "PassportPhotos": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "BankAccountDetails": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "SignedNda": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "EmployeeId": {
+                  "style": "form"
+                },
+                "Resume": {
+                  "style": "form"
+                },
+                "OfferLetter": {
+                  "style": "form"
+                },
+                "AppointmentLetter": {
+                  "style": "form"
+                },
+                "IdProof": {
+                  "style": "form"
+                },
+                "AddressProof": {
+                  "style": "form"
+                },
+                "EducationalCertificates": {
+                  "style": "form"
+                },
+                "ExperienceLetters": {
+                  "style": "form"
+                },
+                "PassportPhotos": {
+                  "style": "form"
+                },
+                "BankAccountDetails": {
+                  "style": "form"
+                },
+                "SignedNda": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/{id}": {
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeMaster"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeMaster"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeMaster"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/{id}/education": {
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeEducation"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeEducation"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeEducation"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/import": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/attendance": {
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/employee/{empId}/attendance": {
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "empId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/add-head": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayrollHead"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayrollHead"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayrollHead"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/heads": {
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/add-element": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayElement"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayElement"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayElement"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/elements": {
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/add-payroll": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Payroll"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Payroll"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Payroll"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/employee/{empId}": {
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "empId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/generate-summary": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeePayrollSummary"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeePayrollSummary"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeePayrollSummary"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/payroll-overview": {
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "empId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "month",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "financialYear",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/employee-payroll-history/{empId}": {
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "empId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "month",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "financialYear",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/generate-company-overview": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "month",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/company-payroll-overview": {
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "month",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "financialYear",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/payroll-summary/{empId}": {
+      "get": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "parameters": [
+          {
+            "name": "empId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeeMaster/save-payroll-summary": {
+      "post": {
+        "tags": [
+          "EmployeeMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayrollSummaryDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayrollSummaryDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayrollSummaryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/save": {
+      "post": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Vehicle"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Vehicle"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Vehicle"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/all": {
+      "get": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster": {
+      "get": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseType"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseType"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseType"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/all Purpose": {
+      "post": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Purpose"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Purpose"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Purpose"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/{id}": {
+      "delete": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/create-claim": {
+      "post": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClaimMaster"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClaimMaster"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClaimMaster"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/add-travel": {
+      "post": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClaimTravel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClaimTravel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClaimTravel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/add-food": {
+      "post": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClaimFood"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClaimFood"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClaimFood"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/add-expense": {
+      "post": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClaimExpense"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClaimExpense"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClaimExpense"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/upload": {
+      "post": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/month/{month}": {
+      "get": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "parameters": [
+          {
+            "name": "month",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/get-claims": {
+      "get": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "parameters": [
+          {
+            "name": "claimId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/get-claims-by-year": {
+      "get": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "parameters": [
+          {
+            "name": "year",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/delete-claim/{id}": {
+      "delete": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/total-expense": {
+      "get": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "parameters": [
+          {
+            "name": "empId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/update-claim/{id}": {
+      "put": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TravelClaim"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TravelClaim"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TravelClaim"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/get-claim/{id}": {
+      "get": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/get-drafts": {
+      "get": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/delete-draft/{id}": {
+      "delete": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/add-local-purchase": {
+      "post": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LocalPurchase"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LocalPurchase"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LocalPurchase"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/get-all-local-purchases": {
+      "get": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/get-local-purchase/{id}": {
+      "get": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/update-local-purchase/{id}": {
+      "put": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LocalPurchase"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LocalPurchase"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LocalPurchase"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/delete-local-purchase/{id}": {
+      "delete": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/get-local-purchase-by-year/{year}": {
+      "get": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "parameters": [
+          {
+            "name": "year",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/received": {
+      "post": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReceivedAmount"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReceivedAmount"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReceivedAmount"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/spent": {
+      "post": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpentAmount"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpentAmount"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpentAmount"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/spent/{id}": {
+      "put": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpentAmount"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpentAmount"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpentAmount"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/summary": {
+      "get": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TravelMaster/purchase-types": {
+      "get": {
+        "tags": [
+          "TravelMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AttendanceMaster": {
+        "type": "object",
+        "properties": {
+          "attendanceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "empId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "shiftId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weekOffId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "attendanceDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "checkIn": {
+            "type": "string",
+            "format": "date-span",
+            "nullable": true
+          },
+          "checkOut": {
+            "type": "string",
+            "format": "date-span",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "modifiedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "employee": {
+            "$ref": "#/components/schemas/EmployeeMaster"
+          },
+          "shift": {
+            "$ref": "#/components/schemas/Shift"
+          },
+          "weekOff": {
+            "$ref": "#/components/schemas/WeekOff"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClaimExpense": {
+        "type": "object",
+        "properties": {
+          "expenseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "claimId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "expenseType": {
+            "type": "string",
+            "nullable": true
+          },
+          "expenseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "documentPath": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClaimFood": {
+        "type": "object",
+        "properties": {
+          "foodId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "claimId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "foodDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "breakfast": {
+            "type": "number",
+            "format": "double"
+          },
+          "lunch": {
+            "type": "number",
+            "format": "double"
+          },
+          "dinner": {
+            "type": "number",
+            "format": "double"
+          },
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "documentPath": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClaimMaster": {
+        "type": "object",
+        "properties": {
+          "claimId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "employeeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "claimMonth": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "vehicleType": {
+            "type": "string",
+            "nullable": true
+          },
+          "vehicleNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fuelType": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClaimTravel": {
+        "type": "object",
+        "properties": {
+          "travelId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "claimId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "travelDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "purpose": {
+            "type": "string",
+            "nullable": true
+          },
+          "fromLocation": {
+            "type": "string",
+            "nullable": true
+          },
+          "toLocation": {
+            "type": "string",
+            "nullable": true
+          },
+          "kmRun": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "documentPath": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeAddress": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "empId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "currentDoorNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentStreet": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentArea": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentState": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentPincode": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentDoorNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentStreet": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentArea": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentState": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentPincode": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "employee": {
+            "$ref": "#/components/schemas/EmployeeMaster"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeAddressDto": {
+        "type": "object",
+        "properties": {
+          "currentDoorNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentStreet": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentArea": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentState": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentPincode": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentDoorNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentStreet": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentArea": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentState": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentPincode": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentCountry": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeCompensation": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "empId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "accountHolderName": {
+            "type": "string",
+            "nullable": true
+          },
+          "bankName": {
+            "type": "string",
+            "nullable": true
+          },
+          "branchName": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "ifscCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountType": {
+            "type": "string",
+            "nullable": true
+          },
+          "taxInfo": {
+            "type": "string",
+            "nullable": true
+          },
+          "benefits": {
+            "type": "string",
+            "nullable": true
+          },
+          "employee": {
+            "$ref": "#/components/schemas/EmployeeMaster"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeCompensationDto": {
+        "type": "object",
+        "properties": {
+          "accountHolderName": {
+            "type": "string",
+            "nullable": true
+          },
+          "bankName": {
+            "type": "string",
+            "nullable": true
+          },
+          "branchName": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "ifscCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountType": {
+            "type": "string",
+            "nullable": true
+          },
+          "taxInfo": {
+            "type": "string",
+            "nullable": true
+          },
+          "benefits": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeCreateDto": {
+        "type": "object",
+        "properties": {
+          "employeeCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailId": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "emergencyContact": {
+            "type": "string",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "nullable": true
+          },
+          "designation": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfJoining": {
+            "type": "string",
+            "format": "date"
+          },
+          "employmentType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeDocuments": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "employeeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "employeeMaster": {
+            "$ref": "#/components/schemas/EmployeeMaster"
+          },
+          "resume": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "offerLetter": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "appointmentLetter": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "idProof": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "addressProof": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "educationalCertificates": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "experienceLetters": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "passportPhotos": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "bankAccountDetails": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "signedNda": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeEducation": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "empId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "qualification": {
+            "type": "string",
+            "nullable": true
+          },
+          "degreeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "university": {
+            "type": "string",
+            "nullable": true
+          },
+          "yearOfPassing": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "percentage": {
+            "type": "string",
+            "nullable": true
+          },
+          "certifications": {
+            "type": "string",
+            "nullable": true
+          },
+          "employee": {
+            "$ref": "#/components/schemas/EmployeeMaster"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeEducationDto": {
+        "type": "object",
+        "properties": {
+          "qualification": {
+            "type": "string",
+            "nullable": true
+          },
+          "degreeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "university": {
+            "type": "string",
+            "nullable": true
+          },
+          "yearOfPassing": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "percentage": {
+            "type": "string",
+            "nullable": true
+          },
+          "certifications": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeeMaster": {
+        "type": "object",
+        "properties": {
+          "empId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "employeeCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailId": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "emergencyContact": {
+            "type": "string",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "nullable": true
+          },
+          "designation": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfJoining": {
+            "type": "string",
+            "format": "date"
+          },
+          "employmentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "address": {
+            "$ref": "#/components/schemas/EmployeeAddress"
+          },
+          "personalDetails": {
+            "$ref": "#/components/schemas/EmployeePersonalDetails"
+          },
+          "employeeDocuments": {
+            "$ref": "#/components/schemas/EmployeeDocuments"
+          },
+          "attendances": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AttendanceMaster"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeePayrollSummary": {
+        "type": "object",
+        "properties": {
+          "summaryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "empId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "payrollMonth": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "financialYear": {
+            "type": "string",
+            "nullable": true
+          },
+          "monthlyGross": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalDeductions": {
+            "type": "number",
+            "format": "double"
+          },
+          "netTakeHome": {
+            "type": "number",
+            "format": "double"
+          },
+          "annualCtc": {
+            "type": "number",
+            "format": "double"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeePersonalDetails": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "empId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "religion": {
+            "type": "string",
+            "nullable": true
+          },
+          "mobile": {
+            "type": "string",
+            "nullable": true
+          },
+          "alternateContact": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "maritalStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "bloodGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "nationality": {
+            "type": "string",
+            "nullable": true
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "employee": {
+            "$ref": "#/components/schemas/EmployeeMaster"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeePersonalDetailsDto": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "religion": {
+            "type": "string",
+            "nullable": true
+          },
+          "mobile": {
+            "type": "string",
+            "nullable": true
+          },
+          "alternateContact": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "maritalStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "bloodGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "nationality": {
+            "type": "string",
+            "nullable": true
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeePreviousEmployment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "empId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "companyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "designation": {
+            "type": "string",
+            "nullable": true
+          },
+          "experience": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfJoining": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "dateOfRelieving": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "reasonForLeaving": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastDrawnSalary": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "employee": {
+            "$ref": "#/components/schemas/EmployeeMaster"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmployeePreviousEmploymentDto": {
+        "type": "object",
+        "properties": {
+          "companyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "designation": {
+            "type": "string",
+            "nullable": true
+          },
+          "experience": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfJoining": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "dateOfRelieving": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "reasonForLeaving": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastDrawnSalary": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HrAdmin": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hrName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "passwordHash": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "profilePhoto": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "reportingManager1": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportingManager2": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HrLoginDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HrRegisterDto": {
+        "type": "object",
+        "properties": {
+          "hrName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LocalPurchase": {
+        "type": "object",
+        "properties": {
+          "purchaseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "claimNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "customerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseType": {
+            "type": "string",
+            "nullable": true
+          },
+          "equipmentName": {
+            "type": "string",
+            "nullable": true
+          },
+          "equipmentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "serialNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "gstOption": {
+            "type": "string",
+            "nullable": true
+          },
+          "documentPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PayElement": {
+        "type": "object",
+        "properties": {
+          "elementId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "headId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "elementValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "valueType": {
+            "type": "string",
+            "nullable": true
+          },
+          "valueCalculating": {
+            "type": "string",
+            "nullable": true
+          },
+          "payrollHead": {
+            "$ref": "#/components/schemas/PayrollHead"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Payroll": {
+        "type": "object",
+        "properties": {
+          "payrollId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "empId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "elementId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "payElement": {
+            "$ref": "#/components/schemas/PayElement"
+          },
+          "payrollMonth": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "financialYear": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PayrollHead": {
+        "type": "object",
+        "properties": {
+          "headId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "headName": {
+            "type": "string",
+            "nullable": true
+          },
+          "headType": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PayrollSummaryDto": {
+        "type": "object",
+        "properties": {
+          "empId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "payrollMonth": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "financialYear": {
+            "type": "string",
+            "nullable": true
+          },
+          "monthlyGross": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalDeductions": {
+            "type": "number",
+            "format": "double"
+          },
+          "netTakeHome": {
+            "type": "number",
+            "format": "double"
+          },
+          "annualCtc": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PurchaseType": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "created_At": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Purpose": {
+        "type": "object",
+        "properties": {
+          "purposeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "purposeName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReceivedAmount": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Shift": {
+        "type": "object",
+        "properties": {
+          "shiftId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "shiftName": {
+            "type": "string",
+            "nullable": true
+          },
+          "shiftStart": {
+            "type": "string",
+            "format": "date-span"
+          },
+          "shiftEnd": {
+            "type": "string",
+            "format": "date-span"
+          },
+          "attendances": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AttendanceMaster"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SpentAmount": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "purchaseItem": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "billFile": {
+            "type": "string",
+            "nullable": true
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TravelClaim": {
+        "type": "object",
+        "properties": {
+          "claimId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "empId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "purpose": {
+            "type": "string",
+            "nullable": true
+          },
+          "vehType": {
+            "type": "string",
+            "nullable": true
+          },
+          "fromLoc": {
+            "type": "string",
+            "nullable": true
+          },
+          "toLoc": {
+            "type": "string",
+            "nullable": true
+          },
+          "kmRun": {
+            "type": "number",
+            "format": "double"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "food": {
+            "type": "number",
+            "format": "double"
+          },
+          "tollCharge": {
+            "type": "number",
+            "format": "double"
+          },
+          "auto": {
+            "type": "number",
+            "format": "double"
+          },
+          "others": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Vehicle": {
+        "type": "object",
+        "properties": {
+          "vehicleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehicleType": {
+            "type": "string",
+            "nullable": true
+          },
+          "vehicleNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "gearType": {
+            "type": "string",
+            "nullable": true
+          },
+          "fuelType": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccRange": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeekOff": {
+        "type": "object",
+        "properties": {
+          "weekOffId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weekOffDay": {
+            "type": "string",
+            "nullable": true
+          },
+          "attendances": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AttendanceMaster"
+            },
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "EmployeeMaster"
+    },
+    {
+      "name": "TravelMaster"
+    }
+  ]
+}

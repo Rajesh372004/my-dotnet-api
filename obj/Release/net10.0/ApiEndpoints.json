@@ -1,0 +1,1194 @@
+[
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetEmployees",
+    "RelativePath": "api/EmployeeMaster",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetEmployee",
+    "RelativePath": "api/EmployeeMaster/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRPortal.API.Models.EmployeeMaster",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "SaveAddress",
+    "RelativePath": "api/EmployeeMaster/{id}/address",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "HRPortal.API.DTOs.EmployeeAddressDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "SaveCompensation",
+    "RelativePath": "api/EmployeeMaster/{id}/compensation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "HRPortal.API.DTOs.EmployeeCompensationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetCompensation",
+    "RelativePath": "api/EmployeeMaster/{id}/compensation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRPortal.API.Models.EmployeeCompensation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetEmployeeDocuments",
+    "RelativePath": "api/EmployeeMaster/{id}/documents",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetEducation",
+    "RelativePath": "api/EmployeeMaster/{id}/education",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HRPortal.API.Models.EmployeeEducation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "AddMultipleEducation",
+    "RelativePath": "api/EmployeeMaster/{id}/education/bulk",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dtos",
+        "Type": "System.Collections.Generic.List\u00601[[HRPortal.API.DTOs.EmployeeEducationDto, HRPortal.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "SavePersonalDetails",
+    "RelativePath": "api/EmployeeMaster/{id}/personal-details",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "HRPortal.API.DTOs.EmployeePersonalDetailsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetPersonalDetails",
+    "RelativePath": "api/EmployeeMaster/{id}/personal-details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "SavePreviousEmployment",
+    "RelativePath": "api/EmployeeMaster/{id}/previous-employment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dtos",
+        "Type": "System.Collections.Generic.List\u00601[[HRPortal.API.DTOs.EmployeePreviousEmploymentDto, HRPortal.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetPreviousEmployment",
+    "RelativePath": "api/EmployeeMaster/{id}/previous-employment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HRPortal.API.Models.EmployeePreviousEmployment, HRPortal.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "AddPayElement",
+    "RelativePath": "api/EmployeeMaster/add-element",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "element",
+        "Type": "PayElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "AddPayrollHead",
+    "RelativePath": "api/EmployeeMaster/add-head",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "head",
+        "Type": "HRPortal.API.Models.PayrollHead",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "AddPayroll",
+    "RelativePath": "api/EmployeeMaster/add-payroll",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "payroll",
+        "Type": "HRPortal.API.Models.Payroll",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetAttendance",
+    "RelativePath": "api/EmployeeMaster/attendance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetCompanyPayrollOverview",
+    "RelativePath": "api/EmployeeMaster/company-payroll-overview",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "month",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "financialYear",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetPayElements",
+    "RelativePath": "api/EmployeeMaster/elements",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetPayrollSummary",
+    "RelativePath": "api/EmployeeMaster/employee-payroll-history/{empId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "month",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "financialYear",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetEmployeePayroll",
+    "RelativePath": "api/EmployeeMaster/employee/{empId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetEmployeeAttendance",
+    "RelativePath": "api/EmployeeMaster/employee/{empId}/attendance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GenerateCompanyOverview",
+    "RelativePath": "api/EmployeeMaster/generate-company-overview",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "month",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GeneratePayrollSummary",
+    "RelativePath": "api/EmployeeMaster/generate-summary",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EmployeePayrollSummary",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetPayrollHeads",
+    "RelativePath": "api/EmployeeMaster/heads",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "Login",
+    "RelativePath": "api/EmployeeMaster/HRlogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "HRPortal.API.DTOs.HrLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "Register",
+    "RelativePath": "api/EmployeeMaster/HRregister",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "HRPortal.API.DTOs.HrRegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "ImportAttendance",
+    "RelativePath": "api/EmployeeMaster/import",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetPayrollOverview",
+    "RelativePath": "api/EmployeeMaster/payroll-overview",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "month",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "financialYear",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetPayrollSummary",
+    "RelativePath": "api/EmployeeMaster/payroll-summary/{empId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "GetHr",
+    "RelativePath": "api/EmployeeMaster/profile/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "CreateEmployee",
+    "RelativePath": "api/EmployeeMaster/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "HRPortal.API.DTOs.EmployeeCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "SavePayrollSummary",
+    "RelativePath": "api/EmployeeMaster/save-payroll-summary",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "HRPortal.API.DTOs.PayrollSummaryDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/EmployeeMaster/update-profile/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updated",
+        "Type": "HRPortal.API.Models.HrAdmin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "UploadDocuments",
+    "RelativePath": "api/EmployeeMaster/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EmployeeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Resume",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "OfferLetter",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "AppointmentLetter",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdProof",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressProof",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "EducationalCertificates",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExperienceLetters",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "PassportPhotos",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "BankAccountDetails",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "SignedNda",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.EmployeeMasterController",
+    "Method": "UploadPhoto",
+    "RelativePath": "api/EmployeeMaster/upload-photo/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "photo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "GetPurposes",
+    "RelativePath": "api/TravelMaster",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "Post",
+    "RelativePath": "api/TravelMaster",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "HRPortal.API.Models.PurchaseType",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "DeletePurpose",
+    "RelativePath": "api/TravelMaster/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "AddExpense",
+    "RelativePath": "api/TravelMaster/add-expense",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "expense",
+        "Type": "HRPortal.API.Models.ClaimExpense",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "AddFood",
+    "RelativePath": "api/TravelMaster/add-food",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "food",
+        "Type": "HRPortal.API.Models.ClaimFood",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "AddLocalPurchase",
+    "RelativePath": "api/TravelMaster/add-local-purchase",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "HRPortal.API.Models.LocalPurchase",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "AddTravel",
+    "RelativePath": "api/TravelMaster/add-travel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "travel",
+        "Type": "HRPortal.API.Models.ClaimTravel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "GetAllVehicles",
+    "RelativePath": "api/TravelMaster/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "AddPurpose",
+    "RelativePath": "api/TravelMaster/all Purpose",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "purpose",
+        "Type": "HRPortal.API.Models.Purpose",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "CreateClaim",
+    "RelativePath": "api/TravelMaster/create-claim",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claim",
+        "Type": "HRPortal.API.Models.ClaimMaster",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "DeleteClaim",
+    "RelativePath": "api/TravelMaster/delete-claim/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "DeleteDraft",
+    "RelativePath": "api/TravelMaster/delete-draft/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "DeleteLocalPurchase",
+    "RelativePath": "api/TravelMaster/delete-local-purchase/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "GetAllLocalPurchases",
+    "RelativePath": "api/TravelMaster/get-all-local-purchases",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "GetClaim",
+    "RelativePath": "api/TravelMaster/get-claim/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "GetClaims",
+    "RelativePath": "api/TravelMaster/get-claims",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claimId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "GetClaimsByYear",
+    "RelativePath": "api/TravelMaster/get-claims-by-year",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "GetDraftClaims",
+    "RelativePath": "api/TravelMaster/get-drafts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "GetLocalPurchaseByYear",
+    "RelativePath": "api/TravelMaster/get-local-purchase-by-year/{year}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "GetLocalPurchase",
+    "RelativePath": "api/TravelMaster/get-local-purchase/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "GetClaimsByMonth",
+    "RelativePath": "api/TravelMaster/month/{month}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "month",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "Get",
+    "RelativePath": "api/TravelMaster/purchase-types",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "AddReceived",
+    "RelativePath": "api/TravelMaster/received",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "HRPortal.API.Models.ReceivedAmount",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "SaveVehicle",
+    "RelativePath": "api/TravelMaster/save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vehicle",
+        "Type": "HRPortal.API.Models.Vehicle",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "AddSpent",
+    "RelativePath": "api/TravelMaster/spent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "HRPortal.API.Models.SpentAmount",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "UpdateSpent",
+    "RelativePath": "api/TravelMaster/spent/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "HRPortal.API.Models.SpentAmount",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "DeleteSpent",
+    "RelativePath": "api/TravelMaster/spent/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "GetSummary",
+    "RelativePath": "api/TravelMaster/summary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "GetTotalExpense",
+    "RelativePath": "api/TravelMaster/total-expense",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "UpdateClaim",
+    "RelativePath": "api/TravelMaster/update-claim/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedClaim",
+        "Type": "HRPortal.API.Models.TravelClaim",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "UpdateLocalPurchase",
+    "RelativePath": "api/TravelMaster/update-local-purchase/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "purchase",
+        "Type": "HRPortal.API.Models.LocalPurchase",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRPortal.API.Controllers.TravelMasterController",
+    "Method": "UploadFile",
+    "RelativePath": "api/TravelMaster/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
